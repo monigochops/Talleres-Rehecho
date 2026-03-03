@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacidad | Talleres Rehecho</title>
+  <meta name="description" content="Política de privacidad." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bgOverlay" aria-hidden="true"></div>
+  <header class="header is-scrolled">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Volver">
+        <div class="brand__mark"><img src="imagenes/logo.png" alt="Logo" /></div>
+        <div class="brand__text">
+          <div class="brand__name">Talleres Rehecho</div>
+          <div class="brand__tag">Privacidad</div>
+        </div>
+      </a>
+      <a class="btn btn--soft" href="index.html">← Volver</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Política de privacidad</h2>
+        <p>Plantilla básica. Sustituye los datos del titular y añade email si lo tienes.</p>
+      </div>
+      <article class="card" style="line-height:1.8">
+        <h3>Responsable</h3>
+        <p><strong>Talleres Rehecho</strong><br>C. Cuadrante, 27, 06411 Medellín, Badajoz</p>
+
+        <h3>Qué datos se recogen</h3>
+        <p>Si usas el formulario, el mensaje se abre en WhatsApp y se envía bajo tu acción.</p>
+
+        <h3>Finalidad</h3>
+        <ul>
+          <li>Atender solicitudes de cita o información.</li>
+          <li>Responder consultas.</li>
+        </ul>
+
+        <h3>Derechos</h3>
+        <p>Acceso, rectificación, supresión, oposición, limitación y portabilidad (contacta con el titular).</p>
+
+        <p style="color:rgba(255,255,255,.65); font-weight:800; margin-top:18px;">
+          Última actualización: <span id="upd"></span>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">© <span id="y"></span> Talleres Rehecho</div>
+      <div class="footer__links"><a href="cookies.html">Cookies</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("upd").textContent = new Date().toLocaleDateString("es-ES");
+  </script>
+</body>
+</html>

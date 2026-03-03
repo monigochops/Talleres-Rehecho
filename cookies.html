@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookies | Talleres Rehecho</title>
+  <meta name="description" content="Política de cookies." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bgOverlay" aria-hidden="true"></div>
+  <header class="header is-scrolled">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Volver">
+        <div class="brand__mark"><img src="imagenes/logo.png" alt="Logo" /></div>
+        <div class="brand__text">
+          <div class="brand__name">Talleres Rehecho</div>
+          <div class="brand__tag">Cookies</div>
+        </div>
+      </a>
+      <a class="btn btn--soft" href="index.html">← Volver</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Política de cookies</h2>
+        <p>Plantilla básica. Si añades Analytics/Ads, actualiza esta página y añade consentimiento si aplica.</p>
+      </div>
+      <article class="card" style="line-height:1.8">
+        <h3>Qué son</h3>
+        <p>Archivos pequeños que se guardan en tu dispositivo para mejorar la experiencia o medir el uso.</p>
+
+        <h3>Cookies usadas</h3>
+        <p>Esta web, por defecto, no instala cookies propias. El mapa incrustado puede estar sujeto a cookies del proveedor.</p>
+
+        <p style="color:rgba(255,255,255,.65); font-weight:800; margin-top:18px;">
+          Última actualización: <span id="upd"></span>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">© <span id="y"></span> Talleres Rehecho</div>
+      <div class="footer__links"><a href="privacy.html">Privacidad</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("upd").textContent = new Date().toLocaleDateString("es-ES");
+  </script>
+</body>
+</html>

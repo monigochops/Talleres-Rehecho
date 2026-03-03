@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talleres Rehecho | Taller mecánico en Medellín (Badajoz)</title>
+  <meta name="description" content="Taller mecánico en Medellín (Badajoz). Mantenimiento, diagnosis y reparación. Llama o pide cita por WhatsApp." />
+  <meta name="theme-color" content="#070b14" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon (placeholder). Reemplaza por tu icono si quieres -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- Background overlay (la imagen real se configura en CSS: body::before) -->
+  <div class="bgOverlay" aria-hidden="true"></div>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="chip" id="chipLocation">📍 Medellín (Badajoz)</span>
+        <span class="chip chip--ghost" id="chipHours">⏱️ Horario: consultar</span>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" id="topPhone" href="#">📞 <span>LLAMAR</span></a>
+        <a class="topbar__link" id="topMaps" href="#" target="_blank" rel="noopener">🧭 <span>CÓMO LLEGAR</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <!-- ✅ Aquí va tu imagen  -->
+        <div class="brand__mark">
+          <img id="brandMarkImg" src="imagenes/logo.png" alt="Logo Talleres Rehecho" />
+        </div>
+
+        <div class="brand__text">
+          <div class="brand__name" id="brandName">Talleres Rehecho</div>
+          <div class="brand__tag" id="brandTag">Taller mecánico • Medellín (Badajoz)</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleLines" aria-hidden="true"></span>
+          <span class="sr">Abrir menú</span>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <a class="nav__link" href="#servicios">Servicios</a>
+          <a class="nav__link" href="#destacados">Destacados</a>
+          <a class="nav__link" href="#opiniones">Opiniones</a>
+          <a class="nav__link" href="#galeria">Galería</a>
+          <a class="nav__link" href="#contacto">Contacto</a>
+          <a class="btn btn--primary nav__cta" id="navPhone" href="#">Pedir cita</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <p class="badge">Taller moderno • Servicio cercano</p>
+          <h1>Tu coche, en manos de un taller que trabaja <span class="accent">fino y rápido</span>.</h1>
+          <p class="lead">
+            Mantenimiento, diagnosis y reparaciones con atención clara y profesional. Estamos en
+            <strong>Medellín (Badajoz)</strong>.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" id="heroPhone" href="#">📞 Llamar ahora</a>
+            <a class="btn btn--glass" id="heroMaps" href="#" target="_blank" rel="noopener">📍 Cómo llegar</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaCard">
+              <div class="metaCard__kpi" id="kpiRating">4,7</div>
+              <div class="metaCard__txt">Valoración media</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__kpi" id="kpiReviews">+30</div>
+              <div class="metaCard__txt">Reseñas</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__kpi">⚙️</div>
+              <div class="metaCard__txt">Diagnosis & mantenimiento</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__panel reveal">
+          <div class="panel">
+            <div class="panel__title">Pedir cita</div>
+            <p class="panel__desc">Llámanos o envíanos un mensaje y te damos hueco lo antes posible.</p>
+
+            <form class="form" id="leadForm">
+              <label class="field">
+                <span>Nombre</span>
+                <input type="text" name="name" placeholder="Tu nombre" autocomplete="name" required />
+              </label>
+
+              <label class="field">
+                <span>Teléfono</span>
+                <input type="tel" name="phone" placeholder="Tu teléfono" autocomplete="tel" required />
+              </label>
+
+             
+              <label class="field">
+                <span>¿Qué necesitas?</span>
+                <select name="service" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option value="mantenimiento">Mantenimiento</option>
+                  <option value="diagnosis">Diagnosis</option>
+                  <option value="mecanica">Mecánica general</option>
+                  <option value="frenos">Frenos</option>
+                  <option value="suspension">Suspensión / Dirección</option>
+                  <option value="bateria">Batería / Arranque</option>
+                  <option value="itv">Revisión pre-ITV</option>
+                  <option value="neumaticos">Neumáticos</option>
+                  <option value="aire">Aire acondicionado</option>
+                  <option value="electricidad">Electricidad / Electrónica</option>
+                  <option>Otro</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Mensaje (opcional)</span>
+                <textarea name="message" rows="3" placeholder="Cuéntanos el problema"></textarea>
+              </label>
+
+              <button class="btn btn--primary btn--full" type="submit">Enviar por WhatsApp</button>
+              <p class="form__note">No guardamos tus datos. Se abre WhatsApp con el mensaje.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios (grid) -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Servicios</h2>
+          <p>Lo esencial para mantener tu coche a punto, con estándar profesional.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon">🛠️</div>
+            <h3>Mecánica general</h3>
+            <p>Reparaciones y sustitución de componentes con diagnóstico previo y explicación clara.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">🧪</div>
+            <h3>Diagnosis</h3>
+            <p>Lectura de fallos, comprobaciones y soluciones orientadas a evitar gastos innecesarios.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">🧴</div>
+            <h3>Mantenimiento</h3>
+            <p>Cambios de aceite, filtros, líquidos y revisiones periódicas para alargar la vida del motor.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">✅</div>
+            <h3>Revisión pre-ITV</h3>
+            <p>Revisamos puntos clave para que vayas a la ITV con más tranquilidad.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">🚗</div>
+            <h3>Frenos y suspensión</h3>
+            <p>Seguridad primero: revisión y reparación de frenos, amortiguación y dirección.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">🔋</div>
+            <h3>Batería y arranque</h3>
+            <p>Comprobación y sustitución de batería, alternador y sistema de arranque.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios destacados (outline icons) -->
+    <section class="section section--alt" id="destacados">
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <h2>Servicios destacados</h2>
+            <p class="lead2">
+              Lo que más suele pedir la gente de la zona. Ideal para convertir visitas en llamadas.
+            </p>
+
+            <div class="highlights">
+              <div class="hl reveal">
+                <div class="hl__ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/>
+                    <circle cx="12" cy="12" r="3.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="hl__t">Diagnosis de averías</div>
+                  <div class="hl__d">Localizamos el problema antes de cambiar piezas “a ciegas”.</div>
+                </div>
+              </div>
+
+              <div class="hl reveal">
+                <div class="hl__ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 8a2 2 0 0 1-2 2h-1v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-9H5a2 2 0 0 1 0-4h14a2 2 0 0 1 2 2Z"/>
+                    <path d="M9 10v2"/><path d="M15 10v2"/><path d="M10 2h4"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="hl__t">Mantenimiento</div>
+                  <div class="hl__d">Aceite, filtros y revisiones para prevenir averías caras.</div>
+                </div>
+              </div>
+
+              <div class="hl reveal">
+                <div class="hl__ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 18h12"/><path d="M8 18v-6a4 4 0 0 1 8 0v6"/>
+                    <path d="M7 6h10"/><path d="M9 6V4h6v2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="hl__t">Frenos & seguridad</div>
+                  <div class="hl__d">Comprobación de frenos, suspensión y dirección.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ctaRow">
+              <a class="btn btn--primary" id="whyPhone" href="#">📞 Pedir cita</a>
+              <a class="btn btn--soft" href="#contacto">Ver contacto</a>
+            </div>
+          </div>
+
+          <div class="stats reveal">
+            <div class="stat">
+              <div class="stat__n" id="statRating">4,7/5</div>
+              <div class="stat__t">Valoración</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n" id="statReviews">31</div>
+              <div class="stat__t">Reseñas</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">📍</div>
+              <div class="stat__t">Medellín (Badajoz)</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">⚙️</div>
+              <div class="stat__t">Servicio mecánico</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq reveal" aria-label="Preguntas frecuentes">
+          <button class="faq__item" type="button">
+            <span>¿Trabajáis con cita previa?</span>
+            <span class="faq__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq__panel">
+            <p>Recomendado. Llama o envía WhatsApp para reservar hueco y evitar esperas.</p>
+          </div>
+
+          <button class="faq__item" type="button">
+            <span>¿Dais presupuesto antes de reparar?</span>
+            <span class="faq__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq__panel">
+            <p>Sí, te explicamos el diagnóstico y las opciones antes de hacer nada importante.</p>
+          </div>
+
+          <button class="faq__item" type="button">
+            <span>¿Qué zona cubrís?</span>
+            <span class="faq__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq__panel">
+            <p>Principalmente Medellín y alrededores (Badajoz). Si vienes de fuera, te decimos la mejor ruta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Opiniones -->
+    <section class="section" id="opiniones">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Opiniones</h2>
+          <p>
+            Mostramos valoración y enlace a Google. 
+          </p>
+        </div>
+
+        <div class="grid grid--3" id="reviewsGrid" aria-live="polite">
+          <!-- JS inyecta reseñas cortas (placeholders por defecto). -->
+        </div>
+
+        <div class="center reveal">
+          <a class="btn btn--soft" id="reviewsLink" href="#" target="_blank" rel="noopener">Ver reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section section--alt" id="galeria">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Galería</h2>
+          <p>Reemplaza los archivos de <code>/assets</code> por tus imágenes, manteniendo el mismo nombre.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gItem reveal"><img src="imagenes/motor1.png" alt="Foto del taller" loading="lazy"></figure>
+          <figure class="gItem reveal"><img src="imagenes/amortiguador.png" alt="Foto de mecánica" loading="lazy"></figure>
+          <figure class="gItem reveal"><img src="imagenes/medidor.png" alt="Foto de elevador" loading="lazy"></figure>
+          <figure class="gItem reveal"><img src="imagenes/motos.png" alt="Foto de herramientas" loading="lazy"></figure>
+          <figure class="gItem reveal"><img src="imagenes/piezas.png" alt="Foto de recepción" loading="lazy"></figure>
+          <figure class="gItem reveal"><img src="imagenes/escapes.png" alt="Foto de trabajo" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Contacto</h2>
+          <p>Te atendemos rápido. Llama o ven directamente al taller.</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact__card reveal">
+            <h3>Datos</h3>
+
+            <div class="info">
+              <div class="info__row">
+                <span class="info__k">📞 Teléfono</span>
+                <a class="info__v" id="contactPhone" href="#">—</a>
+              </div>
+              <div class="info__row">
+                <span class="info__k">📍 Dirección</span>
+                <span class="info__v" id="contactAddress">—</span>
+              </div>
+              <div class="info__row">
+                <span class="info__k">🕒 Horario</span>
+                <span class="info__v" id="contactHours">Consultar</span>
+              </div>
+            </div>
+
+            <div class="ctaRow">
+              <a class="btn btn--primary" id="contactCtaPhone" href="#">📞 Llamar</a>
+              <a class="btn btn--soft" id="contactCtaMaps" href="#" target="_blank" rel="noopener">📍 Cómo llegar</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3>Mensaje rápido</h3>
+            <p class="muted">Abre WhatsApp con un texto preescrito. Puedes editarlo.</p>
+            <a class="btn btn--glass btn--full" id="waQuick" href="#" target="_blank" rel="noopener">💬 Enviar WhatsApp</a>
+          </div>
+
+          <div class="contact__map reveal">
+            <iframe
+              id="mapFrame"
+              title="Mapa Talleres Rehecho"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src=""
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="finalCta">
+      <div class="container finalCta__inner reveal">
+        <div>
+          <h2>¿Lo miramos hoy?</h2>
+          <p>Si te encaja, llámanos o ven al taller. Te damos un hueco en cuanto podamos.</p>
+        </div>
+        <div class="finalCta__actions">
+          <a class="btn btn--primary" id="finalPhone" href="#">📞 Llamar</a>
+          <a class="btn btn--soft" id="finalMaps" href="#" target="_blank" rel="noopener">📍 Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Enlace externo (aparece al pasar el ratón). Reemplaza href e imagen por los tuyos -->
+    <a class="footer__cornerLink" id="footerCornerLink" href="https://www.monigochops.com" target="_blank" rel="noopener" aria-label="Enlace externo">
+      <img id="footerCornerImg" src="imagenes/enlaceweb1.png" alt="Enlace externo" loading="lazy" />
+    </a>
+
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="brand__mark brand__mark--sm" aria-hidden="true">
+          <img src="imagenes/logo.png" alt="" />
+        </div>
+        <div>
+          <div class="footer__name" id="footerName">Talleres Rehecho</div>
+          <div class="footer__small">Medellín (Badajoz) • Taller mecánico</div>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+
+      <div class="footer__copy">
+        <span>© <span id="year"></span> <span id="copyName">Talleres Rehecho</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA flotante móvil -->
+  <div class="floatingCta" aria-label="Acciones rápidas">
+    <a class="floatingCta__btn" id="floatCall" href="#" aria-label="Llamar">📞</a>
+    <a class="floatingCta__btn" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+    <a class="floatingCta__btn" id="floatMap" href="#" target="_blank" rel="noopener" aria-label="Cómo llegar">📍</a>
+  </div>
+
+  <!-- LIGHTBOX ULTRA (galería en grande sin salir de la página) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visor de imágenes" tabindex="-1">
+    <div class="lb__backdrop" data-lb-close></div>
+
+    <button class="lb__btn lb__close" id="lbClose" aria-label="Cerrar (Esc)" data-lb-close>✕</button>
+
+    <button class="lb__btn lb__prev" id="lbPrev" aria-label="Anterior (←)">‹</button>
+    <button class="lb__btn lb__next" id="lbNext" aria-label="Siguiente (→)">›</button>
+
+    <div class="lb__stage" id="lbStage" aria-live="polite">
+      <div class="lb__spinner" id="lbSpinner" aria-hidden="true"></div>
+      <img class="lb__img" id="lbImg" src="" alt="Imagen ampliada" draggable="false">
+    </div>
+
+    
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
