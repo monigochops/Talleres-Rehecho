@@ -7,7 +7,7 @@
     phoneDisplay: "+34 689 375 068",
     phoneE164: "+34689375068",
     address: "C. Cuadrante, 27, 06411 Medellín, Badajoz",
-    hours: "Consultar (confírmalo con el taller)",
+    hours: "Horario: 9:00 a 14:00/ 16:00 a 19:30",
     rating: "4,7",
     reviews: "31",
     mapsLink: "https://www.google.com/maps?q=C.+Cuadrante,+27,+06411+Medell%C3%ADn,+Badajoz",
